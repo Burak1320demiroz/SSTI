@@ -6,7 +6,7 @@ app = Flask(__name__)
 def index():
     name = request.args.get("name", "Ziyaretçi")
 
-    # Kullanıcı girdisini escape ederek SSTI'yi engelliyoruz
+    # Kullanıcı girdisini escape ederek SSTI'yi engelliyoruz , escape fonksiyonu bu tehlikeli karakterleri güvenli hâle getirir.
     
     safe_name = escape(name)
     template = f"Merhaba {safe_name}"
